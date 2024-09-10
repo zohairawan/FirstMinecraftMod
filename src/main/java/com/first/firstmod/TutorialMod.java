@@ -43,7 +43,7 @@ public class TutorialMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {}
 
-    // Add the example block item to the building blocks tab
+    // Add registered item to the creative mode tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ALEXANDRITE);
