@@ -1,3 +1,4 @@
+// Stable build - Mod shows up in "mod" game menu
 package com.first.firstmod;
 
 import com.mojang.logging.LogUtils;
