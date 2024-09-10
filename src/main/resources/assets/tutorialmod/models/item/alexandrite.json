@@ -1,0 +1,6 @@
+{
+  "parent" : "minecraft:item/generated",
+  "textures" : {
+    "layer8" : "tutorialmod:item/alexandrite"
+  }
+}
