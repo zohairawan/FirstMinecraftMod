@@ -16,3 +16,11 @@
 - Add (alexandrite_block.Json) to Blockstates to point it to the block model
 - Add (alexandrite_block.Json) to Block to point it to the texture
 - Add (alexandrite_block.Json) to item so you can add the item to the inventory menu
+### Create custom tab
+- Create custom Class in Item package
+- Register the newly created Class
+  - Add it to list of registered entities
+  - Complete registry using registry()
+- Call register() in TutorialMod Class
+- Add the tab to the game in the newly created Class
+- Add translation to en_us.json file

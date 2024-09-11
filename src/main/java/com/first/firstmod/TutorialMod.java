@@ -2,6 +2,7 @@
 package com.first.firstmod;
 
 import com.first.firstmod.block.ModBlocks;
+import com.first.firstmod.item.ModCreativeModeTabs;
 import com.first.firstmod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
@@ -34,6 +35,8 @@ public class TutorialMod {
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        // Creates custom tab
+        ModCreativeModeTabs.register(modEventBus);
         // Registers item
         ModItems.register(modEventBus);
         // Registers block
@@ -49,14 +52,11 @@ public class TutorialMod {
     // Add registered item to the creative mode tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.ALEXANDRITE);
-            event.accept(ModItems.RAW_ALEXANDRITE);
             event.accept(ModItems.BLUESTONE);
             event.accept(ModItems.RAW_BLUESTONE);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
-            event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
+
         }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
