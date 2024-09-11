@@ -2,5 +2,8 @@
   "item.tutorialmod.alexandrite": "Alexandrite",
   "item.tutorialmod.raw_alexandrite": "Raw Alexandrite",
   "item.tutorialmod.bluestone": "Bluestone",
-  "item.tutorialmod.raw_bluestone": "Raw Bluestone"
+  "item.tutorialmod.raw_bluestone": "Raw Bluestone",
+
+  "block.tutorialmod.alexandrite_block": "Alexandrite Block",
+  "block.tutorialmod.raw_alexandrite_block": "Raw Alexandrite Block"
 }

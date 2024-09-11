@@ -1,6 +1,7 @@
 // Stable build - Mod shows up in "mod" game menu
 package com.first.firstmod;
 
+import com.first.firstmod.block.ModBlocks;
 import com.first.firstmod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
@@ -35,6 +36,8 @@ public class TutorialMod {
         MinecraftForge.EVENT_BUS.register(this);
         // Registers item
         ModItems.register(modEventBus);
+        // Registers block
+        ModBlocks.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -51,8 +54,11 @@ public class TutorialMod {
             event.accept(ModItems.BLUESTONE);
             event.accept(ModItems.RAW_BLUESTONE);
         }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
+            event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
+        }
     }
-
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {}
