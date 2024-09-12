@@ -36,6 +36,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ALEXANDRITE_ORE.get());
                     }).build());
 
+    public static final RegistryObject<CreativeModeTab> CUSTOM_ITEM = CREATIVE_MODE_TABS.register("custom_item",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CHISEL.get()))
+                    .withTabsBefore(ALEXANDRITE_ITEMS_TAB.getId(),ALEXANDRITE_BLOCKS_TAB.getId())
+                    .title(Component.translatable("creativetab.tutorialmod.custom_item"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.CHISEL.get());
+                    }).build());
+
 
     // Completes registry of class
     public static void register(IEventBus eventBus) {

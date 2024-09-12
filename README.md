@@ -24,3 +24,6 @@
 - Call register() in TutorialMod Class
 - Add the tab to the game in the newly created Class
 - Add translation to en_us.json file
+### Adding custom advanced items
+- Create the custom advanced item in custom package
+- Register newly created item

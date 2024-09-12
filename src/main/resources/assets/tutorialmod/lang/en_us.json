@@ -10,8 +10,9 @@
   "block.tutorialmod.alexandrite_ore": "Alexandrite Ore",
   "block.tutorialmod.alexandrite_deepslate_ore": "Alexandrite Deepslate Ore",
 
-
-
   "creativetab.tutorialmod.alexandrite_items": "Alexandrite Items",
-  "creativetab.tutorialmod.alexandrite_block": "Alexandrite Blocks"
+  "creativetab.tutorialmod.alexandrite_block": "Alexandrite Blocks",
+  "creativetab.tutorialmod.custom_item": "Custom Items",
+
+  "item.tutorialmod.chisel": "Chisel"
 }
