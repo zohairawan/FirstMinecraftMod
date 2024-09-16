@@ -16,32 +16,28 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
 
     // Add Item tab to game
-    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_ITEMS_TAB = CREATIVE_MODE_TABS.register("alexandrite_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALEXANDRITE.get()))
-                    .title(Component.translatable("creativetab.tutorialmod.alexandrite_items"))
+
+    public static final RegistryObject<CreativeModeTab> CUSTOM_ITEM = CREATIVE_MODE_TABS.register("custom_item",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CHISEL.get()))
+                    .title(Component.translatable("creativetab.tutorialmod.custom_item"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.CHISEL.get());
                         output.accept(ModItems.ALEXANDRITE.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
                     }).build());
 
-    // Add block tab to game
-    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("alexandrite_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ALEXANDRITE_BLOCK.get()))
-                    .withTabsBefore(ALEXANDRITE_ITEMS_TAB.getId())
-                    .title(Component.translatable("creativetab.tutorialmod.alexandrite_block"))
+    // Add Block tab to game
+
+    public static final RegistryObject<CreativeModeTab> CUSTOM_BLOCK = CREATIVE_MODE_TABS.register("custom_block",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.MAGIC_BLOCK.get()))
+                    .withTabsBefore(CUSTOM_ITEM.getId())
+                    .title(Component.translatable("creativetab.tutorialmod.custom_block"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.ALEXANDRITE_ORE.get());
-                    }).build());
-
-    public static final RegistryObject<CreativeModeTab> CUSTOM_ITEM = CREATIVE_MODE_TABS.register("custom_item",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CHISEL.get()))
-                    .withTabsBefore(ALEXANDRITE_ITEMS_TAB.getId(),ALEXANDRITE_BLOCKS_TAB.getId())
-                    .title(Component.translatable("creativetab.tutorialmod.custom_item"))
-                    .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.CHISEL.get());
+                        output.accept(ModBlocks.MAGIC_BLOCK.get());
                     }).build());
 
 
