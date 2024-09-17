@@ -3,6 +3,8 @@
   "item.tutorialmod.raw_alexandrite": "Raw Alexandrite",
   "item.tutorialmod.bluestone": "Bluestone",
   "item.tutorialmod.raw_bluestone": "Raw Bluestone",
+  "item.tutorialmod.chisel": "Chisel",
+  "item.tutorialmod.chisel": "Kohlrabi",
 
   "block.tutorialmod.alexandrite_block": "Alexandrite Block",
   "block.tutorialmod.raw_alexandrite_block": "Raw Alexandrite Block",
@@ -12,7 +14,6 @@
   "block.tutorialmod.magic_block": "Magic Block",
 
   "creativetab.tutorialmod.custom_item": "Custom Items",
-  "creativetab.tutorialmod.custom_block": "Custom Blocks",
+  "creativetab.tutorialmod.custom_block": "Custom Blocks"
 
-  "item.tutorialmod.chisel": "Chisel"
 }

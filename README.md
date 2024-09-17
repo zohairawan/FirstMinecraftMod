@@ -31,3 +31,12 @@
 - Create the custom advanced block in custom package
 - Register like a regular block
 - edit the properties of the block ex. Magic Block.java
+### Adding food and fuel
+- Creating custom food properties
+  - Create class(ModFoodProperties) in item package
+  - Register the custom food item and assets in the ModItem class
+  - Add custom food item to custom item tab
+  - Register the item by creating its own json file in models/item package
+  - Add translation to en-us.json file
+  - Add texture png to texture/item package
+  - 
