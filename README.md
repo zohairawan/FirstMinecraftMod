@@ -27,3 +27,7 @@
 ### Adding custom advanced items
 - Create the custom advanced item in custom package
 - Register newly created item
+### Adding custom advanced blocks]
+- Create the custom advanced block in custom package
+- Register like a regular block
+- edit the properties of the block ex. Magic Block.java
